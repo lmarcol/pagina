@@ -1,0 +1,54 @@
+
+body {
+    margin: 0;
+
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+
+  .centrado{
+    width: 80%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btn_eliminar{
+    text-align: center;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: red;
+    border: 2px solid red
+    
+}
+.btn_eliminar:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid white
+}
+.btn_editar{
+    width: 250px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(64, 160, 227);
+    border: 2px solid rgb(64, 160, 227);
+}
+.btn_editar:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid white
+}
+/*FORMULARIO EDITAR*/
+
+.formulario {
+    background-color:rgb(241 213 179);
+    border-radius: 5%;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/login.css" as="style">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="navegacion-titulo" href="inicio.html">
+            <h1 class="titulo">San Antonio
+                <span>Abarrotes</span>
+            </h1>
+        </a>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="inicio.html">Inicio </a>
+            <a href="mostrar.php">Tabla </a>
+        </nav>
+    </div>
+
+    <form action="registrocrud.php" method="Post" class="formulario">
+        <fieldset>
+            <legend>Registro de productos</legend>
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input class="input-text" id="nombre" name="nombre" type="text" placeholder="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label>Categoria</label>
+                    <input class="input-text" id="categoria" name="categoria" type="text" placeholder="categoria">
+                </div>
+
+                <div class="campo">
+                    <label>Precio</label>
+                    <input class="input-text" id="precio" name="precio" type="text" placeholder="precio">
+                </div>
+
+                <div class="campo" >
+                    <label>Imagen</label>
+                    <input class="input-text" type="text" id="imagen" name="imagen" placeholder="imagen">
+
+                </div>
+                
+
+            </div> <!--Este es el contenedor de los campos-->
+            <div class="alinear-derecha flex">
+                <input class="boton w-sm-100" type="submit" value="Enviar">
+            </div>
+
+
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

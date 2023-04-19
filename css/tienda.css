@@ -1,0 +1,190 @@
+:root {
+    --primnario: #d9e9ec;
+    --primarioOscuro: #ee6565;
+    --secundario: #fda999;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: rgb(228, 150, 150);
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+body{
+    background-color: #DFE9F3;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.contenedor{
+    justify-content: center;
+    max-width: 120rem;
+    margin: auto;
+}
+h1, h2, h3{
+    text-align: center;
+    color: withe;
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 4rem;
+    color: plum;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 1rem 0;
+    width: 10rem;
+    border-radius: 10rem;
+}
+/** Footer **/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0; /*Lo hace mas grueso*/
+    margin-top: 2rem; /*Le da separacion con el elemento de arriba*/
+}
+.footer__texto{
+    font-family: var(--fuentePrincipal); /*Cambia fuente del texto*/
+    text-align: center;
+    font-size: 2.2rem; /*cambia el texto*/
+}
+
+/* Navegacion */
+.navegacion{
+    background-color: rgb(247, 182, 111);
+    padding: 1rem; /*hace mas gruesa la barra*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  /*Separa los elementos del enlace (FORMA NUEVA)  */
+}
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal); /*cambia la fuente del texto*/
+    color: var(--blanco);
+    font-size: 3rem;
+
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{ /* hover funciona para cambiar de color al poner encima el puntero*/
+    color: plum;
+}
+
+/** Grid **/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /** Colum gap y row gap en una sola linea**/
+}
+@media (min-width: 768px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Productos **/
+.producto{
+    border-radius: 2rem;
+    background-color:bisque;
+    padding: 1rem 1rem;
+}
+.producto__imagen{
+    width: 200%; /*Toma todo el espacio disponible en el div*/
+
+}
+.producto__informacion{
+
+}
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/** Graficos**/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--camisas{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px){ /*Quita el scroll a los lados en pantallas pequeñas*/
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+.boton{
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 100%;
+    background: var(--blanco);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+
+}
+.boton-carrito{
+    background-color: var(--blanco);
+    color: white;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 12px;
+    width: auto;
+    border: none;
+
+    margin: 16px 0;
+    font-size: 16px;
+
+}
